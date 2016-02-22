@@ -15,6 +15,8 @@ nmap <leader>tt :TagbarToggle<cr>
 "" NERDTree configure
 let g:NERDTreeWinPos = "left"
 let NERDTreeIgnore=['\.o$', '\.tgz$', '\.a$']
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 "" syntastic configure
 "let g:syntastic_python_checkers = ['pylint']
