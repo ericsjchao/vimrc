@@ -4,3 +4,6 @@
 [submodule "sources_non_forked/molokai"]
 	path = sources_non_forked/molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule "sources_non_forked/vim-gitgutter"]
+	path = sources_non_forked/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
