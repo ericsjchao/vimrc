@@ -13,6 +13,7 @@ nmap <leader>tt :TagbarToggle<cr>
 
 
 "" NERDTree configure
+let g:NERDTreeWinPos = "left"
 let NERDTreeIgnore=['\.o$', '\.tgz$', '\.a$']
 
 "" syntastic configure
@@ -36,7 +37,8 @@ let g:ycm_warning_symbol = '?'
 nnoremap <leader>jd :YcmCompleter GoTo<cr>
 
 "" gvim full screen
-if has("gui_running")
+if (has("win16") || has("win32")) && has("gui_running")
+    colorscheme molokai
     au GUIEnter * simalt~x
     set guioptions-=m
     set guioptions-=T
