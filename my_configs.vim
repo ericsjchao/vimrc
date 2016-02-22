@@ -27,7 +27,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 "let g:syntastic_auto_jump = 1
 
 "" YouCompleteMe configure
-let g:ycm_global_ycm_extra_conf = '~/.vim_runtime/sources_non_forked/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
@@ -38,9 +38,10 @@ let g:ycm_error_symbol = '✗'
 let g:ycm_warning_symbol = '?'
 nnoremap <leader>jd :YcmCompleter GoTo<cr>
 
+colorscheme molokai
+
 "" gvim full screen
-if (has("win16") || has("win32")) && has("gui_running")
-    colorscheme molokai
+if has("win32") && has("gui_running")
     au GUIEnter * simalt~x
     set guioptions-=m
     set guioptions-=T
@@ -51,4 +52,25 @@ if (has("win16") || has("win32")) && has("gui_running")
 endif
 
 "" airline 
-let g:airline_powerline_fonts = 1
+if has("gui_running")
+    let g:airline_powerline_fonts = 1
+else
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
+    "unicode symbols
+    let g:airline_left_sep = '»'
+    let g:airline_left_sep = '▶'
+    let g:airline_right_sep = '«'
+    let g:airline_right_sep = '◀'
+    let g:airline_symbols.crypt = '🔒'
+    let g:airline_symbols.linenr = '␊'
+    let g:airline_symbols.linenr = '␤'
+    let g:airline_symbols.linenr = '¶'
+    let g:airline_symbols.branch = '⎇'
+    let g:airline_symbols.paste = 'ρ'
+    let g:airline_symbols.paste = 'Þ'
+    let g:airline_symbols.paste = '∥'
+    let g:airline_symbols.notexists = '∄'
+    let g:airline_symbols.whitespace = 'Ξ'
+endif
