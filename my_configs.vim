@@ -10,12 +10,12 @@ let g:user_emmet_mode = 'a'
 
 "" tagbar configure
 nmap <leader>tt :TagbarToggle<cr>
-
+let g:tagbar_iconchars = ['▸', '▾']
 
 "" NERDTree configure
 let g:NERDTreeWinPos = "left"
 let NERDTreeIgnore=['\.o$', '\.tgz$', '\.a$']
-let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowExpandable = '▸' 
 let g:NERDTreeDirArrowCollapsible = '▾'
 
 "" syntastic configure
