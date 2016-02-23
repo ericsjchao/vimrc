@@ -10,3 +10,9 @@
 [submodule "sources_non_forked/emmet-vim"]
 	path = sources_non_forked/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "sources_non_forked/vim-misc"]
+	path = sources_non_forked/vim-misc
+	url = https://github.com/xolox/vim-misc.git
+[submodule "sources_non_forked/vim-session"]
+	path = sources_non_forked/vim-session
+	url = https://github.com/xolox/vim-session.git

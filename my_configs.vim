@@ -82,3 +82,13 @@ elseif has("mac") || has("macunix")
     let g:airline_symbols.notexists = '∄'
     let g:airline_symbols.whitespace = 'Ξ'
 endif
+
+"" vim session
+let g:session_directory = "~/.vim/temp_dirs/session"
+let g:session_autoload = "no"                
+let g:session_autosave = "no"               
+let g:session_command_aliases = 1
+nnoremap <leader>so :OpenSession 
+nnoremap <leader>ss :SaveSession 
+nnoremap <leader>sd :DeleteSession<CR>
+nnoremap <leader>sc :CloseSession<CR>
