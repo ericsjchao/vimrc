@@ -62,7 +62,7 @@ endif
 "" airline 
 if has("gui_running")
     let g:airline_powerline_fonts = 1
-else
+elseif has("mac") || has("macunix")
     if !exists('g:airline_symbols')
         let g:airline_symbols = {}
     endif
