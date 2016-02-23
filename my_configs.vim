@@ -27,7 +27,11 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 "let g:syntastic_auto_jump = 1
 
 "" YouCompleteMe configure
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+if has("win32")
+    let g:ycm_global_ycm_extra_conf = '~/.vim_runtime/sources_non_forked/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+else
+    let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+endif
 let g:ycm_confirm_extra_conf = 0
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
@@ -38,6 +42,10 @@ let g:ycm_error_symbol = '✗'
 let g:ycm_warning_symbol = '?'
 nnoremap <leader>jd :YcmCompleter GoTo<cr>
 
+"" vim markdown configure
+let g:vim_markdown_folding_disabled = 1
+
+"" color scheme
 colorscheme molokai
 
 "" gvim full screen
