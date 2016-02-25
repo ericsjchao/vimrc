@@ -31,6 +31,8 @@ if has("win32")
     let g:ycm_global_ycm_extra_conf = '~/.vim_runtime/sources_non_forked/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 else
     let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+    let g:ycm_python_binary_path = '/usr/bin/python'
+    let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 endif
 let g:ycm_confirm_extra_conf = 0
 set completeopt-=preview
