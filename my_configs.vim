@@ -25,6 +25,8 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 "let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
 "let g:syntastic_enable_balloons = 1
 "let g:syntastic_auto_jump = 1
+"let g:syntastic_error_symbol = '✗'
+"let g:syntastic_warning_symbol = '?'
 
 "" YouCompleteMe configure
 if has("win32")
@@ -75,3 +77,6 @@ nnoremap <leader>so :OpenSession
 nnoremap <leader>ss :SaveSession 
 nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
+
+"" eclim 
+let g:EclimCompletionMethod = 'omnifunc'
