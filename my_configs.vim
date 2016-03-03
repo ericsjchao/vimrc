@@ -10,9 +10,11 @@ let g:user_emmet_mode = 'a'
 
 "" tagbar configure
 nmap <leader>tt :TagbarToggle<cr>
+let g:tagbar_compact = 1
 let g:tagbar_iconchars = ['▸', '▾']
 
 "" NERDTree configure
+let NERDTreeMinimalUI = 1
 let g:NERDTreeWinPos = "left"
 let NERDTreeIgnore=['\.o$', '\.tgz$', '\.a$']
 let g:NERDTreeDirArrowExpandable = '▸' 
@@ -29,10 +31,9 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 "let g:syntastic_warning_symbol = '?'
 
 "" YouCompleteMe configure
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 if has("win32")
-    let g:ycm_global_ycm_extra_conf = '~/.vim_runtime/sources_non_forked/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 else
-    let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
     let g:ycm_python_binary_path = '/usr/bin/python'
     let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 endif
@@ -61,6 +62,7 @@ if has("win32") && has("gui_running")
     set guioptions-=r
     set guioptions-=b
     set showtabline=0
+    map <F11> :call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
 endif
 
 "" airline 
@@ -69,7 +71,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "" vim session
-let g:session_directory = "~/.vim/temp_dirs/session"
+let g:session_directory = "~/.vim/temp/session"
 let g:session_autoload = "no"                
 let g:session_autosave = "no"               
 let g:session_command_aliases = 1
@@ -80,3 +82,8 @@ nnoremap <leader>sc :CloseSession<CR>
 
 "" eclim 
 let g:EclimCompletionMethod = 'omnifunc'
+
+"" Youdao
+vnoremap <silent> <C-T> <Esc>:Ydv<CR> 
+nnoremap <silent> <C-T> <Esc>:Ydc<CR> 
+noremap <leader>yd :Yde<CR>
